@@ -1,4 +1,4 @@
-# storybook-vite-react-component
+# react-component-storybook
 
 Use vitejs, storybook and typescript to build great react components.
 
@@ -8,7 +8,7 @@ Use vitejs, storybook and typescript to build great react components.
 $ yarn
 ```
 
-# Development
+# Develop
 
 ```
 $ yarn dev
