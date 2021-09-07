@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "start-storybook -p 3000",
     "lint": "eslint . --ext .ts,.tsx",
-    "build": "npm run build:vite && npm run build:storybook",
+    "build": "npm run lint && npm run build:vite && npm run build:storybook",
     "build:vite": "vite build",
     "build:storybook": "build-storybook --quiet --loglevel error --output-dir ./dist/storybook",
     "prepublishOnly": "npm run build"
