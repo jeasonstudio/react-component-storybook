@@ -14,17 +14,22 @@ export interface IDemoComponentProps {
   onClick?: () => void;
 }
 
+console.log(11);
+
 /**
  * React Functional Component Demo. `Hello World`
  * @param props
  */
 export const DemoComponent: React.FunctionComponent<IDemoComponentProps> = (
-  props
+  props,
 ) => {
   console.log(props);
   return (
     <ComponentWrapper color={props.color} onClick={props.onClick}>
-      Hello {props.name}.
+      Hello
+      {' '}
+      {props.name}
+      .
     </ComponentWrapper>
   );
 };
