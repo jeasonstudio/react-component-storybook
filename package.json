@@ -10,6 +10,9 @@
       "require": "./dist/index.umd.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "start-storybook -p 3000",
     "build": "npm run build:vite && npm run build:storybook",
