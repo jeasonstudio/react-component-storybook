@@ -23,6 +23,6 @@ $ yarn build
 # Publish
 
 ```
-$ yarn version --(major|minor|path|...)
+$ yarn version --(major|minor|patch|...)
 $ yarn publish
 ```
