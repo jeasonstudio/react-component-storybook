@@ -2,32 +2,34 @@
 
 Use vitejs, storybook and typescript to build great react components.
 
-# Install
+> Just click `Use this template` button or use `gh` cli `gh repo create -p jeasonstudio/react-component-storybook my-component`. [Read more documents.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template)
+
+## Install
 
 ```
 $ yarn
 ```
 
-# Develop
+## Develop
 
 ```
 $ yarn dev
 ```
 
-# Build
+## Build
 
 ```
 $ yarn build
 ```
 
-# Publish
+## Publish
 
 ```
 $ yarn version --(major|minor|patch|...)
 $ yarn publish
 ```
 
-# CI/CD
+## CI/CD
 
 We use vercel to deploy our component stories.
 
