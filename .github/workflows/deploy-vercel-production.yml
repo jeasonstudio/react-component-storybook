@@ -21,7 +21,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_ANGULAR }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: dist/storybook
           alias-domains: |
             staging.angular.vercel-action.amond.dev
@@ -33,6 +33,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_ANGULAR }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: dist/storybook
           vercel-args: "--prod "
