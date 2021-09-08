@@ -1,0 +1,38 @@
+name: deploy - vercel production
+on:
+  push:
+    branches:
+      - master
+  pull_request_target:
+
+jobs:
+  storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build
+        run: |
+          yarn
+          yarn build:storybook
+      - uses: ./
+        id: vercel-action-staging
+        if: github.event_name == 'pull_request_target'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_ANGULAR }}
+          working-directory: dist/storybook
+          alias-domains: |
+            staging.angular.vercel-action.amond.dev
+            pr-{{PR_NUMBER}}.angular.vercel-action.amond.dev
+      - uses: ./
+        id: vercel-action-production
+        if: github.event_name == 'push'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_ANGULAR }}
+          working-directory: dist/storybook
+          vercel-args: "--prod "
